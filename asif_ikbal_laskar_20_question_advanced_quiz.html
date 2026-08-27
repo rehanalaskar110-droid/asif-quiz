@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>How Well Do You Know Asif Ikbal Laskar?</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#fff;min-height:100vh;background:radial-gradient(circle at 10% 10%,#164e63,transparent 30%),radial-gradient(circle at 90% 90%,#064e3b,transparent 35%),#050816}
+.wrap{width:92%;max-width:850px;margin:auto;padding:20px 0 45px}
+.screen{display:none;animation:fade .45s ease}.screen.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.header{text-align:center;padding:28px 10px}
+.creator{font-size:12px;letter-spacing:3px;color:#70f0b0;font-weight:bold}
+h1{font-size:clamp(30px,7vw,58px);margin:12px 0;background:linear-gradient(90deg,#fff,#70f0b0,#ffd166);-webkit-background-clip:text;color:transparent}
+.subtitle{color:#b9c7d8;font-size:16px}
+.card{background:rgba(255,255,255,.075);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(18px);border-radius:25px;padding:28px;margin:18px 0;box-shadow:0 18px 55px #0007}
+.title{color:#70f0b0;margin-top:0;font-size:26px}
+label{display:block;margin:15px 0 7px;color:#dce8f5;font-weight:bold}
+input,select,textarea{width:100%;padding:14px;border-radius:13px;border:1px solid #ffffff22;background:#0006;color:#fff;font-size:15px;outline:none}
+select option{background:#101827}
+textarea{min-height:100px;resize:vertical}
+button{border:0;border-radius:14px;padding:15px 20px;background:linear-gradient(90deg,#70f0b0,#ffd166);color:#07111f;font-size:17px;font-weight:800;cursor:pointer;width:100%;margin-top:18px}
+button:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.instructions{line-height:1.9;color:#e5edf7;background:#ffd16612;border-left:4px solid #ffd166;padding:18px;border-radius:13px}
+.creditbox{text-align:center;padding:35px 20px}
+.bigmade{font-size:clamp(30px,8vw,55px);font-weight:900;background:linear-gradient(90deg,#70f0b0,#ffd166);-webkit-background-clip:text;color:transparent}
+.progress{position:sticky;top:8px;z-index:10;background:#050816e8;padding:12px 16px;border-radius:15px;margin:10px 0 18px;backdrop-filter:blur(12px)}
+.bar{height:8px;background:#1e293b;border-radius:20px;overflow:hidden;margin-top:8px}.fill{height:100%;width:0;background:linear-gradient(90deg,#70f0b0,#ffd166);transition:.3s}
+.qnumber{color:#70f0b0;font-weight:bold}.question-title{font-size:23px;line-height:1.45}
+.option{display:flex;align-items:center;gap:10px;padding:15px;margin:10px 0;border-radius:14px;background:#ffffff09;border:1px solid #ffffff12;cursor:pointer;transition:.2s}
+.option:hover{background:#70f0b012;border-color:#70f0b055}.option input{width:auto;accent-color:#70f0b0}
+.navrow{display:flex;gap:12px}.navrow button{flex:1}.back{background:#ffffff12;color:#fff}
+.error{color:#ffd166;text-align:center;margin-top:12px;min-height:20px}
+.result{text-align:center}.score{font-size:64px;font-weight:900;color:#70f0b0}.stars{font-size:34px;letter-spacing:5px}
+.rating button{width:auto;margin:5px;padding:12px 18px;background:#ffffff12;color:#fff;border:1px solid #ffffff20}
+.rating button.selected{background:linear-gradient(90deg,#70f0b0,#ffd166);color:#07111f}
+.footer{text-align:center;color:#8fa1b8;padding:28px;font-size:13px}
+.small{color:#9fb1c7;font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section id="page1" class="screen active">
+<header class="header"><div class="creator">MADE BY ASIF IKBAL LASKAR</div>
+<h1>🏏 HOW WELL DO YOU KNOW ASIF? 👀</h1>
+<p class="subtitle">A personal quiz about Asif Ikbal Laskar</p></header>
+<div class="card">
+<h2 class="title">👤 Participant Details</h2>
+<label>Full Name *</label><input id="pname" placeholder="Enter your full name">
+<label>Class / Grade *</label><input id="pclass" placeholder="Example: 8-C">
+<label>School / Institution</label><input id="school" placeholder="Enter school name">
+<label>Roll Number</label><input id="roll" placeholder="Enter roll number">
+<label>You are a... *</label>
+<select id="relation"><option value="">Select</option><option>Student</option><option>Teacher</option><option>Friend</option><option>Parent</option><option>Classmate</option><option>Other</option></select>
+<label>What is your relation with Asif?</label><input id="know" placeholder="Friend / Classmate / Teacher / etc.">
+<button onclick="goInstructions()">CONTINUE ➜</button>
+<div id="detailError" class="error"></div>
+</div>
+</section>
+
+<section id="page2" class="screen">
+<div class="card">
+<h2 class="title">📜 IMPORTANT INSTRUCTIONS</h2>
+<div class="instructions">
+1️⃣ Answer all 20 questions honestly.<br>
+2️⃣ Each question has 4 options.<br>
+3️⃣ Do not ask Asif for the answers. 😂<br>
+4️⃣ Do not search online for answers. 👀<br>
+5️⃣ Read every question carefully before selecting an option.<br>
+6️⃣ Complete the quiz and view your final score.<br>
+7️⃣ <b>You MUST take a screenshot of your score card.</b><br>
+8️⃣ <b>Submit the score screenshot to Asif Ikbal Laskar.</b> 🏆<br>
+9️⃣ After rating the quiz, continue to the final thank-you page.
+</div>
+<button onclick="showPage('page3')">I UNDERSTAND — NEXT ➜</button>
+<button class="back" onclick="showPage('page1')">← BACK</button>
+</div>
+</section>
+
+<section id="page3" class="screen">
+<div class="card creditbox">
+<div class="creator">THIS QUIZ IS</div>
+<div class="bigmade">MADE BY<br>ASIF IKBAL LASKAR</div>
+<p class="subtitle">🏏 Cricket • Friends • Fun • Memories 🏏</p>
+<p>Welcome to a quiz created specially to see who knows Asif the best.</p>
+<button onclick="startQuiz()">START THE QUIZ 🚀</button>
+<button class="back" onclick="showPage('page2')">← BACK</button>
+</div>
+</section>
+
+<section id="quizScreen" class="screen">
+<div class="progress"><div style="display:flex;justify-content:space-between"><span>Quiz Progress</span><span id="counter">1 / 20</span></div><div class="bar"><div class="fill" id="fill"></div></div></div>
+<div class="card">
+<div class="qnumber" id="qnum"></div>
+<h2 class="question-title" id="qtext"></h2>
+<div id="options"></div>
+<div id="qerror" class="error"></div>
+<div class="navrow"><button class="back" id="prevBtn" onclick="prevQuestion()">← PREVIOUS</button><button id="nextBtn" onclick="nextQuestion()">NEXT →</button></div>
+</div>
+</section>
+
+<section id="ratingScreen" class="screen">
+<div class="card result">
+<h2 class="title">🏆 YOUR SCORE CARD</h2>
+<div class="score" id="scoreText"></div>
+<p id="scoreMessage"></p>
+<p>Participant: <b id="resultName"></b></p>
+<p>📸 <b>Please take a screenshot of this score card and submit it to Asif Ikbal Laskar.</b></p>
+<hr style="border-color:#ffffff18">
+<h2 class="title">⭐ RATE THIS QUIZ</h2>
+<div class="rating" id="rating">
+<button onclick="rate(1)">★</button><button onclick="rate(2)">★★</button><button onclick="rate(3)">★★★</button><button onclick="rate(4)">★★★★</button><button onclick="rate(5)">★★★★★</button>
+</div>
+<button onclick="finish()">FINISH ➜</button>
+<div id="rateError" class="error"></div>
+</div>
+</section>
+
+<section id="thanksScreen" class="screen">
+<div class="card creditbox">
+<div class="creator">THANK YOU ❤️</div>
+<h1>🎉 QUIZ COMPLETED!</h1>
+<p class="subtitle">Thank you for taking the “How Well Do You Know Asif?” quiz.</p>
+<p>Your participation and answers mean a lot.</p>
+<div class="bigmade">MADE BY<br>ASIF IKBAL LASKAR</div>
+<p>🏏 Keep supporting cricket • Keep smiling • Keep being awesome 🏆</p>
+<p class="small">Remember: Submit your score screenshot to Asif Ikbal Laskar.</p>
+<button onclick="location.reload()">TAKE QUIZ AGAIN 🔄</button>
+</div>
+<footer class="footer">Made by Asif Ikbal Laskar<br>© 2026 • How Well Do You Know Me? 🏏</footer>
+</section>
+</div>
+
+<script>
+const questions=[
+["What is Asif's full name?",["Asif Ikbal Laskar","Asif Ahmed","Asif Laskar","Ikbal Asif"],0],
+["What is Asif's favourite sport?",["🏏 Cricket","⚽ Football","🏀 Basketball","🏐 Volleyball"],0],
+["Who is Asif's favourite cricketer?",["MS Dhoni","Virat Kohli","Rohit Sharma","Jasprit Bumrah"],0],
+["Which IPL team does Asif support?",["Chennai Super Kings","Mumbai Indians","Royal Challengers Bengaluru","Kolkata Knight Riders"],0],
+["What is Asif's favourite colour?",["Red ❤️","Blue","Green","Black"],0],
+["What is Asif's favourite subject?",["English","Science","SST","Mathematics"],2],
+["Which quality describes Asif best?",["Friendly","Funny","Helpful","Quiet"],null],
+["What is one of Asif's favourite hobbies?",["Playing","Reading","Drawing","Singing"],0],
+["What is Asif most passionate about?",["Cricket","Football","Gaming","Music"],0],
+["What is Asif's favourite cricket format?",["Test","ODI","T20","All of them"],2],
+["What is Asif's favourite cricket jersey number?",["10","18","45","7"],3],
+["What is Asif's favourite food?",["Biryani","Pizza","Unekedu","Burger"],2],
+["What is Asif's favourite movie?",["Movie 1","Movie 2","Movie 3","Movie 4"],null],
+["What is Asif's favourite song?",["Baarishen","Song 2","Song 3","Song 4"],0],
+["Who is one of Asif's closest friends?",["Mekbub","Friend 2","Friend 3","Friend 4"],0],
+["What is Asif's dream cricket team?",["India","Mumbai Indians","RCB","CSK"],3],
+["Which cricket role would Asif prefer?",["Batsman","Bowler","All-rounder","Wicketkeeper"],null],
+["What is Asif's favourite cricket shot?",["Cover Drive","Pull Shot","Straight Drive","Helicopter Shot"],0],
+["What makes Asif happiest?",["Cricket","Friends","Family","All of these"],3],
+["Who is this entire quiz about?",["Asif Ikbal Laskar","MS Dhoni","Virat Kohli","Rohit Sharma"],0]
+];
+
+let current=0, answers=Array(20).fill(null), rating=0;
+
+function showPage(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function goInstructions(){
+ if(!document.getElementById('pname').value.trim()||!document.getElementById('pclass').value.trim()||!document.getElementById('relation').value){document.getElementById('detailError').textContent="Please fill the required participant details.";return}
+ showPage('page2');
+}
+function startQuiz(){current=0;showPage('quizScreen');renderQuestion()}
+function renderQuestion(){
+ const q=questions[current];document.getElementById('qnum').textContent="QUESTION "+(current+1);
+ document.getElementById('qtext').textContent=q[0];
+ document.getElementById('counter').textContent=(current+1)+" / 20";
+ document.getElementById('fill').style.width=((current+1)/20*100)+"%";
+ const box=document.getElementById('options');box.innerHTML="";
+ q[1].forEach((opt,i)=>{
+  const lab=document.createElement('label');lab.className='option';
+  lab.innerHTML='<input type="radio" name="answer" value="'+i+'"><span>'+String.fromCharCode(65+i)+') '+opt+'</span>';
+  lab.querySelector('input').checked=answers[current]===i;
+  lab.onclick=()=>{answers[current]=i;document.getElementById('qerror').textContent=''};
+  box.appendChild(lab);
+ });
+ document.getElementById('prevBtn').style.visibility=current===0?'hidden':'visible';
+ document.getElementById('nextBtn').textContent=current===19?'SUBMIT QUIZ 🏆':'NEXT →';
+}
+function nextQuestion(){
+ if(answers[current]===null){document.getElementById('qerror').textContent="Please select one option.";return}
+ if(current<19){current++;renderQuestion()}else showResult()
+}
+function prevQuestion(){if(current>0){current--;renderQuestion()}}
+function showResult(){
+ let score=0;
+ questions.forEach((q,i)=>{if(q[2]!==null&&answers[i]===q[2])score++});
+ const percent=Math.round(score/20*100);
+ document.getElementById('scoreText').textContent=score+" / 20";
+ document.getElementById('resultName').textContent=document.getElementById('pname').value;
+ document.getElementById('scoreMessage').textContent=percent>=90?"🔥 LEGENDARY! You know Asif extremely well!":percent>=75?"🏆 Excellent! You really know Asif!":percent>=50?"😎 Great job! You know Asif pretty well!":"😂 Time to know Asif a little better!";
+ showPage('ratingScreen');
+}
+function rate(n){rating=n;document.querySelectorAll('.rating button').forEach((b,i)=>b.classList.toggle('selected',i+1===n));document.getElementById('rateError').textContent='Thanks for rating! ⭐'}
+function finish(){if(!rating){document.getElementById('rateError').textContent="Please select a rating first.";return}showPage('thanksScreen')}
+</script>
+</body>
+</html>
